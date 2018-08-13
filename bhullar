@@ -1,0 +1,75 @@
+page call templat in wordpress
+<?php
+/**
+ * Template Name: Contact
+ */
+get_header();
+?> 
+
+--css templat in wordpress
+/*
+Theme Name: kiwi-loan-provider-final
+Author: Miraculous soft solutions
+Description: wordpress
+Version: 0.0.1
+*/
+
+--header and footer get in wordpress
+<?php
+get_header();
+?>
+
+<?php
+get_footer();
+?>
+
+--css get in wordpress and images and script
+<?php bloginfo('template_directory');?>/
+
+--wordpress manu
+<?php
+	wp_nav_menu(
+    array(
+	'theme_location'  => 'header-menu',
+    'menu'            => '',
+	'container'       => '',
+    'container_class' => 'menu-{menu slug}-container',
+	'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+	'after'           => '',
+	'link_before'     => '<span>',
+	'link_after'      => '</span>',
+	'items_wrap'      => '<ul class="navigation clearfix">%3$s</ul>',
+	'depth'           => 0,
+	'walker'          => ''
+	)
+    );
+	?>
+									
+--link get in wordpress									
+<?php echo get_the_permalink(24)?>
+
+--url get in wordpress
+<?php echo home_url();?>
+home page head get in wordpress
+<?php wp_head();?>
+
+--html form shot cod
+<?php echo do_shortcode('[contact-form-7 id="73" title="contact form 2"]');?>
+
+--title get in wordpress
+
+<?php echo get_the_title();?>
+
+--title get while loop
+--start while loop
+<?php while ( have_posts() ) : the_post();?>
+--end while loop
+<?php endwhile;?>
+
+--content page call in wordpress(admin)
+<?php the_content()?>
